@@ -9883,14 +9883,23 @@ export type EqlSearchResponse<TEvent = unknown> = EqlEqlSearchResponseBase<TEven
 
 export type EqlSearchResultPosition = 'tail' | 'head'
 
+export type EsqlEsqlParam = EsqlEsqlTypedParam | long | double | string | boolean | null
+
+export interface EsqlEsqlTypedParam {
+  type: string
+  value: ScalarValue
+}
+
 export interface EsqlQueryRequest extends RequestBase {
   format?: string
   delimiter?: string
+  drop_null_columns?: boolean
   body?: {
     columnar?: boolean
     filter?: QueryDslQueryContainer
     locale?: string
-    params?: ScalarValue[]
+    params?: EsqlEsqlParam[]
+    profile?: boolean
     query: string
   }
 }
