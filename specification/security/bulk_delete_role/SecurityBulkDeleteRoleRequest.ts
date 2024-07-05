@@ -20,7 +20,7 @@
 import { Dictionary } from '@spec_utils/Dictionary'
 import { RequestBase } from '@_types/Base'
 import { Refresh } from '@_types/common'
-import {RoleDescriptor} from "@security/_types/RoleDescriptor";
+import { RoleDescriptor } from '@security/_types/RoleDescriptor'
 
 /**
  * The role management APIs are generally the preferred way to manage roles, rather than using file-based role management.
@@ -31,8 +31,7 @@ import {RoleDescriptor} from "@security/_types/RoleDescriptor";
  * @cluster_privileges manage_security
  */
 export interface Request extends RequestBase {
-  path_parts: {
-  }
+  path_parts: {}
   query_parameters: {
     refresh?: Refresh
   }

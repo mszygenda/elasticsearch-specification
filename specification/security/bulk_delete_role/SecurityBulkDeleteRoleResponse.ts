@@ -16,9 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import {Dictionary} from "@spec_utils/Dictionary";
-import {ErrorCause} from "@_types/Errors";
-import {integer} from "@_types/Numeric";
+import { Dictionary } from '@spec_utils/Dictionary'
+import { ErrorCause } from '@_types/Errors'
+import { integer } from '@_types/Numeric'
 
 export class Response {
   body: {
